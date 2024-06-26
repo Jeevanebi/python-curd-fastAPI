@@ -5,9 +5,11 @@ import pyodbc
 app = FastAPI()
 
 # Database connection setup
-server = 'Jeevan_Desktop\SQLSERVER'
+server = 'your_server'
 database = 'TestDB'
-connection_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};Trusted_connection=yes;'
+username = 'your_username'
+password = 'your_password'
+connection_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
 
 # Pydantic model
 class User(BaseModel):
